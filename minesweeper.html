@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper</title>
+    <link rel="stylesheet" href="minesweeper.css">
+    <link rel="icon" href="minesweeper_icon.jpg">
+</head>
+<body>
+    <div class="header">
+        MINESWEEPER
+    </div>
+    <div class="content">
+        <div class="row">
+            <select id="difficulty">
+                <option value="Easy">Easy</option>
+                <option value="Medium">Medium</option>
+                <option value="Hard">Hard</option>
+            </select>
+        </div>
+        <div class="row">
+            <div class="row-left">
+                <div class="high-score">
+                    
+                </div>
+                <div id="timer" class="timer">
+                    00:00
+                </div>
+            </div>
+            <div id="minesweeper-grid" class="minesweeper-grid">
+            </div>
+
+            <div class="play-btn" onclick="setDifficulty()">
+                <div class="inner-btn">
+                    START
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="minesweeper.js"></script>
+</html>

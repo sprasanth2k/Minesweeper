@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+body
+{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right,#e0c3fc,#8ec5fc);
+}
+.header
+{
+    display: flex;
+    font-size: 3rem;
+    font-family:'Courier New', Courier, monospace;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    background: rgba(0,0,0,0.7);
+    color: rgba(255,255,255,0.8);
+    height: 100px;
+}
+.content
+{
+    display: grid;
+    justify-content: center;
+    grid-template-rows: auto auto;
+}
+.row
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:200px;
+}
+.row-left
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+}
+.high-score
+{
+    color: white;
+    font-size: 45px;
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+    font-family: Kalam;
+}
+.minesweeper-grid
+{
+    display: grid;
+    grid-template-columns: repeat(10,45px);
+    grid-template-rows: repeat(10,45px);
+}
+.grid-cell
+{
+    cursor: pointer;
+    font-size: 1.5rem;
+    border: 1px solid white;
+    outline: none;
+    background: rgba(255, 255,255,0.45);
+    transition-duration: 0.4s;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.grid-cell:hover
+{
+    transform: scale(1.2);
+}
+select
+{
+    font-size: 17px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    width: 250px;
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+    font-family: Balsamiq Sans;
+}
+
+.play-btn
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background-color: rgba(255,255,255,0.5);
+    transition-duration: 0.4s;
+    font-family: Balsamiq Sans;
+    font-size: 25px;
+}
+.play-btn:hover
+{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.play-btn:active
+{
+    transform: scale(1.0);
+}
+.inner-btn
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #a9c3fc;
+    color: white;
+    font-weight: bold;
+    width: 85%;
+    height: 85%;
+    border-radius: 100%;
+}
+
+.timer
+{
+    font-size: 50px;
+    font-family: Orbitron;
+    font-weight: 500;
+    color: white;
+    width: 200px;
+}
+.play-again-btn
+{
+    
+    font-size: 30px;
+    border: 5px solid white;
+    color: white;   
+    background: transparent;
+    padding: 10px;
+    transition-duration: 0.4s;
+}
+.play-again-btn:hover
+{
+    cursor: pointer;
+    transform:scale(1.1);
+}
+.play-again-btn:active
+{
+    transform: scale(1.0);
+}
+.play-again-text
+{
+    color: white;
+    font-size: 30px;
+    margin-top: 100px;
+}
