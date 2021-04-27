@@ -78,7 +78,6 @@ function placeMines(mines)
         if(a[x][y]!=-1)
         {
             a[x][y]=-1;
-            document.getElementById(x+''+y).innerHTML = "💣";
             i++;
         }
     }
