@@ -1,6 +1,5 @@
 if(localStorage.getItem('High Score') == null)
 {
-    console.log('always going')
     localStorage.setItem('High Score',0)
 }
 
@@ -33,10 +32,29 @@ function createTable()
             div.className = 'grid-cell';
             div.setAttribute('onClick','displayCell(event)');
             div.setAttribute('oncontextmenu','markCell(event)');
+            div.setAttribute('onmouseover','enableHover(event.target.id)');
+            div.setAttribute('onmouseout','disableHover(event.target.id)');
             div.style.cursor="not-allowed";
             table.append(div);   
         }
     }
+}
+function enableHover(id)
+{
+    let i = parseInt(parseInt(id)/10);
+    let j = parseInt(id)%10;
+    if(f[i][j])
+    {
+        document.getElementById(id).style.transform = "scale(1.2)";
+    }
+    else
+    {
+        document.getElementById(id).style.transform = "none";
+    }
+}
+function disableHover(id)
+{
+    document.getElementById(id).style.transform = "none";
 }
 
 function setDifficulty()
@@ -49,7 +67,7 @@ function setDifficulty()
             let div=document.getElementById(i+''+j);
             div.innerHTML = '';
             div.style.cursor = "pointer";
-            div.style.background = "rgba(255, 255,255,0.45)"
+            div.style.background = "rgba(255, 255,255,0.45)";
             a[i][j] = 0;
             f[i][j] = 1;
         }
@@ -116,7 +134,7 @@ function displayCell(event)
         if(a[i][j] == -1)
         {
             cell.style.background = "rgba(255,0,0,0.7)";
-            cell.style.transform = "scale(1.0)";
+            cell.style.transform = "none";
             cell.innerHTML = "💣";
             flag = false;
             clearInterval(mytimer);
